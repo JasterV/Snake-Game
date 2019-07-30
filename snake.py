@@ -168,6 +168,7 @@ try:
     fin.seek(0)
     high_score = int(fin.readline())
     update_score()
+    # Main game loop
     while True:
         wn.update()
         if head.distance(food) < turtle_size:
@@ -183,7 +184,6 @@ try:
         time.sleep(delay)
 except IOError:
     print("Error opening the score file")
-# main game loop
 finally:
     fin.close()
 wn.mainloop()
